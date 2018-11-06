@@ -1,0 +1,30 @@
+.header{
+    padding: 5px 0px;
+    /* background: #0dd8f3; */
+}
+.header .logo{
+    height: 40px;
+    width: 240px;
+    text-align: center;
+}
+.header .logo img{
+    height: 40px;
+}
+.header .nav{
+    padding: 0 15px;
+    line-height: 40px;
+    text-align: right;
+}
+.content .menu{
+    width: 240px;
+    line-height: 40px;
+    background: #32323d;
+    color: #aeaeae;
+}
+.content .menu .item{
+    color: #aeaeae;
+    display: block;
+}
+.content .active{
+    color: #4fc04d;
+}
