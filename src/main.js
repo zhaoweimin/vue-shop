@@ -3,20 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import { f1, f2 } from './tools/export'
-import a from './tools/export'
-
-// f1()
-// f2()
-a.f1()
-a.f1()
+import VueCoreImageUpload from 'vue-core-image-upload'
+import {api} from './server/api'
 
 Vue.config.productionTip = false
+// 定义全局变量
+Vue.prototype.$api = api
 
+Vue.use(VueCoreImageUpload)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: { App, VueCoreImageUpload },
   template: '<App/>'
 })

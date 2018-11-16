@@ -11,8 +11,7 @@
     </div>
     <div class="dis-flex content">
       <div class="menu">
-        <router-link v-for="(vo, index) in menu" :key='index' :to="vo.link"><div class="item">{{index}}{{vo.name}}</div></router-link>
-        <router-link to="/user"><div class="item">用户1</div></router-link>
+        <router-link v-for="(vo, index) in menu" :key="index" :to="vo.link"><div class="item">{{vo.name}}</div></router-link>
       </div>
       <div class="flex-1 main">
         <router-view/>
@@ -28,9 +27,9 @@ export default {
     return {
       user: '用户1',
       menu: [
-        {link: '/menu/1', name: '菜单1', type: 1},
-        {link: '/menu/2', name: '菜单2', type: 2},
-        {link: '/menu/3', name: '菜单3', type: 3}
+        {link: '/product', name: '产品'},
+        {link: '/product/add', name: '添加产品'},
+        {link: '/user', name: '我的'}
       ]
     }
   }
@@ -40,6 +39,7 @@ export default {
 <style>
 @import './../static/css/base.css'; /*引入公共样式*/
 @import './../static/css/style.css'; /*引入公共样式*/
+@import './../static/css/bootstrap.min.css'; /*引入公共样式*/
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

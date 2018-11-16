@@ -46,7 +46,7 @@ export default {
       page_no: 1,
       page_size: 10
     }
-    this.$server.getProductList(paramObj).then(data => {
+    this.$api.getProductList(paramObj).then(data => {
       console.log(data)
     })
     return {
@@ -58,17 +58,6 @@ export default {
         {id: 3, path: '4.jpg', name: '产品', price: 5},
         {id: 4, path: '5.jpg', name: '产品', price: 5}
       ]
-    }
-  },
-  methods:{  
-    exam: function(){
-      let paramObj = {
-        page_no: 1,
-        page_size: 10
-      }
-      this.$server.getProductList(paramObj).then(data => {
-        console.log(data)
-      })
     }
   }
 }
